@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+assets/
+node_moduljes/
+dist/
+
+.vscode/
