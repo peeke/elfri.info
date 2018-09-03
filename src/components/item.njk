@@ -1,7 +1,7 @@
 <figure class="item">
   <div class="item-image">
-    <img src="/statics/{{ item.src }}" alt="{{ item.title or 'Geen titel' }}">
-    <div class="item-image-shadow"></div>
+    <img src="/statics/{{ item.src }}" alt="{{ item.title or 'Geen titel' }}" data-module="Lazyload">
+    <div class="item-image-shadow" data-module="Shadow"></div>
   </div>
   <figcaption>
     <h2 class="item-title">{{ item.title or 'Geen titel' }}</h2>

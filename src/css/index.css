@@ -28,11 +28,12 @@ p {
 article {
   display: flex;
   align-items: center;
+  transition: transform ease-out 66ms;
 }
 
 .introduction {
   margin: 10vh 10vw;
-  width: 60vw;
+  width: 32rem;
   height: 80vh;
   flex: 0 0 auto;
 }

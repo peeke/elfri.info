@@ -8,8 +8,10 @@ const serve = require('gulp-serve')
 const sourcemaps = require('gulp-sourcemaps')
 const concat = require('gulp-concat')
 const cleanCSS = require('gulp-clean-css')
-const babel = require('gulp-babel')
-const minify = require('gulp-babel-minify')
+// const babel = require('gulp-babel')
+// const minify = require('gulp-babel-minify')
+const rollup = require('gulp-better-rollup')
+const babel = require('rollup-plugin-babel')
 const imageResize = require('gulp-image-resize')
 const imageMin = require('gulp-imagemin')
 const nunjucksRender = require('gulp-nunjucks-render')
@@ -42,18 +44,30 @@ gulp.task('html', () => {
 })
 
 gulp.task('js', () => {
-  return gulp
-    .src(src + '/js/index.js')
-    .pipe(sourcemaps.init())
-    .pipe(
-      babel({
-        presets: ['@babel/env']
-      })
-    )
-    .pipe(concat('index.js'))
-    .pipe(minify())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(dist + '/js'))
+  return (
+    gulp
+      .src(src + '/js/index.js')
+      .pipe(sourcemaps.init())
+      .pipe(
+        rollup(
+          {
+            // There is no `input` option as rollup integrates into the gulp pipeline
+            plugins: [
+              babel({
+                presets: ['@babel/env']
+              })
+            ]
+          },
+          {
+            // Rollups `sourcemap` option is unsupported. Use `gulp-sourcemaps` plugin instead
+            format: 'cjs'
+          }
+        )
+      )
+      // .pipe(minify())
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(dist + '/js'))
+  )
 })
 
 gulp.task('css', () => {
