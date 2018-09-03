@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Lora" rel="stylesheet">
+</head>
+
+<body>
+
+  <main>
+    <article>
+
+      <div class="introduction">
+        <h1>Over mij</h1>
+        <p>Schilderen is voor mij vaak een soort van uitklaapklep geweest, een manier om gebeurtenissen in mijn leven een
+          plaats te geven, ze te kunnen verwerken en te uiten.</p>
+        <p>Mijn kleurgebruik is altijd de verbindende factor geweest in mijn schilderijen. Ik gebruik meestal uitgesproken,
+          wat fellere kleuren en ik hou ervan om nieuwe vormen van werken te ontdekken en om niet alleen verf te gebruiken
+          maar ook andere materialen. Mijn werken worden steeds meer abstact.</p>
+        <p>Sinds kort ben ik stof gaan combineren met schilderwerk. Dat geeft weer een nieuwe invalshoek en een hele nieuwe
+          uitdaging.
+        </p>
+        <p>Het gaat er voor mij om steeds meer mijn eigen weg te volgen en om vooral veel plezier te beleven in het scheppen
+          van nieuwe dingen.</p>
+      </div>
+
+      <ul class="gallery">
+        {% for item in work %}
+        <li>
+          {% include 'components/item.njk' %}
+        </li>
+        {% endfor %}
+      </ul>
+
+    </article>
+  </main>
+
+</body>
+
+</html>

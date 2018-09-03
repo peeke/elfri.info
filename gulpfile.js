@@ -1,5 +1,7 @@
-var parallel = require('concurrent-transform')
-var os = require('os')
+const parallel = require('concurrent-transform')
+const os = require('os')
+const fs = require('fs')
+const path = require('path')
 const gulp = require('gulp')
 
 const serve = require('gulp-serve')
@@ -10,12 +12,33 @@ const babel = require('gulp-babel')
 const minify = require('gulp-babel-minify')
 const imageResize = require('gulp-image-resize')
 const imageMin = require('gulp-imagemin')
+const nunjucksRender = require('gulp-nunjucks-render')
+const data = require('gulp-data')
+const ext = require('gulp-ext-replace')
 
 const src = './src'
 const dist = './dist'
 
 gulp.task('html', () => {
-  return gulp.src(src + '/**/*.html').pipe(gulp.dest(dist))
+  return gulp
+    .src(src + '/**/*.njk')
+    .pipe(
+      data(file => {
+        try {
+          return JSON.parse(fs.readFileSync(file.path.replace('.njk', '.json')))
+        } catch (e) {
+          return {}
+        }
+      })
+    )
+    .pipe(
+      nunjucksRender({
+        path: src,
+        ext: '.njk'
+      })
+    )
+    .pipe(ext('.html'))
+    .pipe(gulp.dest(dist))
 })
 
 gulp.task('js', () => {
@@ -48,7 +71,7 @@ gulp.task('images', () => {
     .src('src/**/*.{jpg,png}')
     .pipe(parallel(imageResize({ width: 1200, height: 800 }), os.cpus().length))
     .pipe(parallel(imageMin(), os.cpus().length))
-    .pipe(gulp.dest(dist + '/statics'))
+    .pipe(gulp.dest(dist))
 })
 
 gulp.task(
@@ -62,7 +85,7 @@ gulp.task(
 gulp.task(
   'dev',
   gulp.parallel('serve', 'html', 'css', 'js', () => {
-    gulp.watch(src + '/**/*.html', gulp.series('html'))
+    gulp.watch(src + '/**/*.njk', gulp.series('html'))
     gulp.watch(src + '/**/*.css', gulp.series('css'))
     gulp.watch(src + '/js/index.js', gulp.series('js'))
   })

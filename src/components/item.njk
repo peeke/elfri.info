@@ -1,0 +1,16 @@
+<figure class="item">
+  <div class="item-image">
+    <img src="/statics/{{ item.src }}" alt="{{ item.title or 'Geen titel' }}">
+    <div class="item-image-shadow"></div>
+  </div>
+  <figcaption>
+    <h2 class="item-title">{{ item.title or 'Geen titel' }}</h2>
+    {% if item.material %}
+    <div class="item-description">
+      {{ item.material }} {% if item.size %}
+      <span class="item-size">{{ item.size }}</span>
+      {% endif %}
+    </div>
+    {% endif %}
+  </figcaption>
+</figure>

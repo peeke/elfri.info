@@ -1,0 +1,210 @@
+{
+  "work": [
+    {
+      "src": "1/1.jpg",
+      "material": "Papier en stof",
+      "size": "0.70 x 1.10 m"
+    },
+    { "src": "1/2.jpg", "material": "Stof", "size": "0.70 x 0.85 m" },
+    { "src": "1/3.jpg", "material": "Stof", "size": "0.50 x 1 m" },
+    {
+      "src": "1/4.jpg",
+      "material": "Stof op papier",
+      "size": "0.80 x 1 m"
+    },
+    {
+      "src": "1/5.jpg",
+      "material": "Stof op papier",
+      "size": "0.50 x 0.65 m"
+    },
+    {
+      "src": "1/6.jpg",
+      "title": "Transformatie",
+      "material": "Gemengde technieken op papier",
+      "size": "0.50 x 0.65 m"
+    },
+    {
+      "src": "1/7.jpg",
+      "title": "De Lanterfanter",
+      "material": "Gemengde technieken op papier",
+      "size": "0.50 x 0.65 m"
+    },
+    {
+      "src": "1/8.jpg",
+      "material": "Gemengde technieken op papier",
+      "size": "0.50 x 0.65 m"
+    },
+    {
+      "src": "1/9.jpg",
+      "material": "Gemengde technieken op papier",
+      "size": "0.50 x 0.65 m"
+    },
+    {
+      "src": "1/10.jpg",
+      "material": "Gemengde technieken op papier",
+      "size": "0.50 x 0.65 m"
+    },
+    {
+      "src": "1/11.jpg",
+      "material": "Gemengde technieken op papier",
+      "size": "0.50 x 0.65 m"
+    },
+    {
+      "src": "1/12.jpg",
+      "material": "Gemengde technieken op papier",
+      "size": "0.70 x 1 m"
+    },
+    {
+      "src": "1/13.jpg",
+      "material": "Gemengde technieken op papier",
+      "size": "0.70 x 1 m"
+    },
+    {
+      "src": "1/14.jpg",
+      "material": "Gemengde technieken op papier",
+      "size": "0.70 x 1 m"
+    },
+    { "src": "1/15.jpg" },
+    {
+      "src": "1/16.jpg",
+      "title": "Elf",
+      "material": "Acryl op doek",
+      "size": "0.70 x 0.90 m"
+    },
+    {
+      "src": "1/17.jpg",
+      "title": "Loslaten",
+      "material": "Acryl op doek",
+      "size": "1.00 x 1.20 m"
+    },
+    {
+      "src": "1/18.jpg",
+      "material": "Acryl op doek",
+      "size": "0.50 x 1.00 m"
+    },
+    {
+      "src": "1/19.jpg",
+      "title": "What’s in your mind?",
+      "material": "Acryl op doek",
+      "size": "0.80 x 1.20 m"
+    },
+    {
+      "src": "1/20.jpg",
+      "title": "Rust",
+      "material": "Acryl en olieverf op doek",
+      "size": "0.70 x 1.80 m"
+    },
+    { "src": "1/21.jpg", "title": "Stof", "size": "0.55 x 1 m" },
+    {
+      "src": "1/22.jpg",
+      "title": "Acryl op doek",
+      "size": "0.35 x 0.50 m"
+    },
+    {
+      "src": "1/23.jpg",
+      "title": "Acryl op doek",
+      "size": "0.50 x 0.50 m"
+    },
+    {
+      "src": "2/2-1.jpg",
+      "material": "Gemengde technieken op stof en doek",
+      "size": "1.00 x 1.20 m"
+    },
+    {
+      "src": "2/2-2.jpg",
+      "title": "Koning Oberon",
+      "material": "Gemengde technieken op papier",
+      "size": "0.70 x 1 m"
+    },
+    {
+      "src": "2/2-3.jpg",
+      "title": "Mam",
+      "material": "Stof op doek",
+      "size": "0.65 x 0.65 m"
+    },
+    {
+      "src": "2/2-4.jpg",
+      "title": "Vroeger",
+      "material": "Stof op oud tafelkleed",
+      "size": "1.00 x 1.10 m"
+    },
+    {
+      "src": "2/2-5.jpg",
+      "material": "Acryl op doek",
+      "size": "0.50 x 0.60 m"
+    },
+    {
+      "src": "2/2-6.jpg",
+      "title": "Onderweg",
+      "material": "acryl op doek",
+      "size": "0.90 x 0.90 m"
+    },
+    {
+      "src": "2/2-7.jpg",
+      "title": "Mijn roze hart",
+      "material": "Olie op doek",
+      "size": "1.00 x 1.20 m"
+    },
+    {
+      "src": "2/2-8.jpg",
+      "material": "Acryl en papier op doek",
+      "size": "0.70 x 0.90 m"
+    },
+    {
+      "src": "2/2-9.jpg",
+      "material": "Acryl op doek",
+      "size": "0.60 x 0.70 m"
+    },
+    { "src": "0/manvrouw2.jpg", "title": "Man-vrouw II" },
+    { "src": "0/manvrouw1.jpg", "title": "Man-vrouw I" },
+    { "src": "0/zondertitel2.jpg" },
+    { "src": "0/brug.jpg", "title": "Brug" },
+    { "src": "0/zon.jpg", "title": "Zon" },
+    { "src": "0/aarde.jpg", "title": "Aarde" },
+    {
+      "src": "0/innerlijk.jpg",
+      "title": "Innerlijk Landschap",
+      "material": "Acryl op doek",
+      "size": "1.00 x 1.50 m."
+    },
+    { "src": "0/emotion8.jpg", "title": "E-motion VIII" },
+    { "src": "0/emotion7.jpg", "title": "E-motion VII" },
+    { "src": "0/emotion6.jpg", "title": "E-motion VI" },
+    { "src": "0/emotion5.jpg", "title": "E-motion V" },
+    { "src": "0/emotion4.jpg", "title": "E-motion IV" },
+    { "src": "0/emotion3.jpg", "title": "E-motion III" },
+    { "src": "0/emotion2.jpg", "title": "E-motion II" },
+    { "src": "0/emotion1.jpg", "title": "E-motion I" },
+    { "src": "0/zondertitel1.jpg" },
+    { "src": "0/kind.jpg", "title": "Kind" },
+    { "src": "0/schaduw.jpg", "title": "Mijn Schaduw en Ik" },
+    { "src": "0/gudo.jpg", "title": "Gudo" },
+    { "src": "0/heavenly7.jpg", "title": "Heavenly Creatures VII" },
+    { "src": "0/heavenly6.jpg", "title": "Heavenly Creatures VI" },
+    { "src": "0/heavenly5.jpg", "title": "Heavenly Creatures V" },
+    { "src": "0/heavenly4.jpg", "title": "Heavenly Creatures IV" },
+    { "src": "0/heavenly3.jpg", "title": "Heavenly Creatures III" },
+    { "src": "0/heavenly2.jpg", "title": "Heavenly Creatures II" },
+    { "src": "0/heavenly1.jpg", "title": "Heavenly Creatures I" },
+    { "src": "0/vlammen.jpg", "title": "Vlammen" },
+    { "src": "0/circle1.jpg", "title": "Circle of Life (1)" },
+    { "src": "0/circle2.jpg", "title": "Circle of Life (2)" },
+    { "src": "0/ikroep2.jpg", "title": "Ik roep (2)" },
+    { "src": "0/ikroep1.jpg", "title": "Ik roep (1)" },
+    { "src": "0/gudoenik.jpg", "title": "Gudo en Ik" },
+    { "src": "0/zwartgat.jpg", "title": "Zwart gat" },
+    { "src": "0/pijn.jpg", "title": "Pijn" },
+    { "src": "0/zussen.jpg", "title": "Zussen" },
+    { "src": "0/anderekant.jpg", "title": "De andere kant" },
+    { "src": "0/gebroken.jpg", "title": "Gebroken" },
+    { "src": "0/stad.jpg", "title": "Stad" },
+    { "src": "0/droom2.jpg", "title": "Droom II" },
+    {
+      "src": "0/droom1.jpg",
+      "title": "Droom I",
+      "material": "Acryl op doek",
+      "size": "0.40 x 0.70 m."
+    },
+    { "src": "0/druipsteen.jpg", "title": "Druipsteen" }
+  ]
+}
