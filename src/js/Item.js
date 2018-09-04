@@ -1,5 +1,3 @@
-import mapNumber from './util/mapNumber'
-
 class Item {
   constructor(element) {
     this.element = element

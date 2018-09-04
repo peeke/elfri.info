@@ -14,6 +14,7 @@ const rollup = require('gulp-better-rollup')
 const babel = require('rollup-plugin-babel')
 const imageResize = require('gulp-image-resize')
 const imageMin = require('gulp-imagemin')
+const imageminMozjpeg = require('imagemin-mozjpeg')
 const nunjucksRender = require('gulp-nunjucks-render')
 const data = require('gulp-data')
 const ext = require('gulp-ext-replace')
@@ -80,13 +81,32 @@ gulp.task('css', () => {
     .pipe(gulp.dest(dist + '/css'))
 })
 
-gulp.task('images', () => {
+gulp.task('highres', () => {
   return gulp
-    .src('src/**/*.{jpg,png}')
+    .src('src/statics/**/*.{jpg,png}')
     .pipe(parallel(imageResize({ width: 1200, height: 800 }), os.cpus().length))
     .pipe(parallel(imageMin(), os.cpus().length))
-    .pipe(gulp.dest(dist))
+    .pipe(gulp.dest(dist + '/statics'))
 })
+
+gulp.task('thumbs', () => {
+  return gulp
+    .src('src/statics/**/*.{jpg,png}')
+    .pipe(parallel(imageResize({ width: 1200, height: 800 }), os.cpus().length))
+    .pipe(
+      parallel(
+        imageMin([
+          imageminMozjpeg({
+            quality: 0
+          })
+        ]),
+        os.cpus().length
+      )
+    )
+    .pipe(gulp.dest(dist + '/statics/low'))
+})
+
+gulp.task('images', gulp.parallel('highres', 'thumbs'))
 
 gulp.task(
   'serve',

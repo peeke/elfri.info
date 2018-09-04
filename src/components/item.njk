@@ -1,6 +1,8 @@
 <figure class="item" data-module="Item">
   <div class="item-image">
-    <img src="/statics/{{ item.src }}" alt="{{ item.title or 'Geen titel' }}" data-module="Image">
+    <div class="item-image-crop">
+      <img src="/statics/low/{{ item.src }}" data-src="/statics/{{ item.src }}" alt="{{ item.title or 'Geen titel' }}" data-module="Image">
+    </div>
     <div class="item-image-shadow" data-module="Shadow"></div>
   </div>
   <figcaption>

@@ -27,6 +27,7 @@
     "gulp-nunjucks-render": "^2.2.2",
     "gulp-serve": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
+    "imagemin-mozjpeg": "^7.0.0",
     "rollup-plugin-babel": "^4.0.3"
   }
 }
