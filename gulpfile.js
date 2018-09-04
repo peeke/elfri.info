@@ -101,6 +101,6 @@ gulp.task(
   gulp.parallel('serve', 'html', 'css', 'js', () => {
     gulp.watch(src + '/**/*.njk', gulp.series('html'))
     gulp.watch(src + '/**/*.css', gulp.series('css'))
-    gulp.watch(src + '/js/index.js', gulp.series('js'))
+    gulp.watch(src + '/**/*.js', gulp.series('js'))
   })
 )

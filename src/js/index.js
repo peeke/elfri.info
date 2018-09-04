@@ -1,8 +1,12 @@
-import Lazyload from './Lazyload'
+import Item from './Item'
+import Image from './Image'
+import Shadow from './Shadow'
 import VirtualScroller from './VirtualScroller'
 
 const components = {
-  Lazyload,
+  Item,
+  Image,
+  Shadow,
   VirtualScroller
 }
 

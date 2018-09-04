@@ -1,11 +1,12 @@
 import mapNumber from './util/mapNumber'
 
-class Shadow {
+class Item {
   constructor(element) {
     this.element = element
 
     this.state = {
-      x: 0
+      x: 0,
+      visible: false
     }
 
     window.addEventListener('resize', () => this.updateRect())
@@ -15,6 +16,13 @@ class Shadow {
 
     this.updateRect()
     this.update(0)
+  }
+
+  set visible(bool) {
+    if (this.state.visible === bool) return
+    this.state.visible = bool
+
+    this.element.style.visibility = bool ? '' : 'hidden'
   }
 
   onVirtualScroll(e) {
@@ -29,21 +37,7 @@ class Shadow {
     const isOutsideViewport =
       x < this.state.rect.left || x > this.state.rect.right
 
-    if (isOutsideViewport) return
-
-    const translation = mapNumber(
-      x,
-      this.state.rect.left,
-      this.state.rect.right,
-      100,
-      -100
-    )
-
-    const opacity =
-      (mapNumber(x, this.state.rect.left, this.state.rect.right, 0, 2) - 1) ** 2
-
-    this.element.style.transform = `translateX(${translation}px)`
-    this.element.style.opacity = (opacity / 3) * 2 + 0.33
+    this.visible = !isOutsideViewport
   }
 
   updateRect() {
@@ -57,4 +51,4 @@ class Shadow {
   }
 }
 
-export default Shadow
+export default Item
