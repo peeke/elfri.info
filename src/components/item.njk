@@ -6,7 +6,7 @@
     <div class="item-image-shadow" data-module="Shadow"></div>
   </div>
   <figcaption>
-    <h2 class="item-title">{{ item.title or 'Geen titel' }}</h2>
+    <h2 class="item-title {{ 'item-no-title' if not item.title }}">{{ item.title or 'Geen titel' }}</h2>
     {% if item.material %}
     <div class="item-description">
       {{ item.material }} {% if item.size %}

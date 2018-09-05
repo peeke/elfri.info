@@ -9,6 +9,7 @@ class Shadow {
     }
 
     window.addEventListener('resize', () => this.updateRect())
+    window.addEventListener('load', () => this.updateRect())
     document.body.addEventListener('virtualscroll', e =>
       this.onVirtualScroll(e)
     )
@@ -43,7 +44,7 @@ class Shadow {
       (mapNumber(x, this.state.rect.left, this.state.rect.right, 0, 2) - 1) ** 2
 
     this.element.style.transform = `translateX(${translation}px)`
-    this.element.style.opacity = (opacity / 3) * 2 + 0.33
+    this.element.style.opacity = (opacity / 4) * 3 + 0.25
   }
 
   updateRect() {

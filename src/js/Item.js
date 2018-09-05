@@ -4,7 +4,7 @@ class Item {
 
     this.state = {
       x: 0,
-      visible: false
+      visible: null
     }
 
     window.addEventListener('resize', () => this.updateRect())
@@ -20,7 +20,14 @@ class Item {
     if (this.state.visible === bool) return
     this.state.visible = bool
 
-    this.element.style.visibility = bool ? '' : 'hidden'
+    this._idleCallback && cancelIdleCallback(this._idleCallback)
+    if (bool) {
+      this.element.style.visibility = ''
+    } else {
+      this._idleCallback = requestIdleCallback(() => {
+        this.element.style.visibility = 'hidden'
+      })
+    }
   }
 
   onVirtualScroll(e) {

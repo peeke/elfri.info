@@ -10,7 +10,9 @@ class VirtualScroller {
     }
 
     window.addEventListener('resize', () => this.updateScrollMax())
-    window.addEventListener('mousewheel', e => this.onMouseWheel(e))
+    this.element.addEventListener('wheel', e => this.onMouseWheel(e), {
+      passive: true
+    })
 
     this.updateScrollMax()
   }
@@ -26,11 +28,9 @@ class VirtualScroller {
   set fastScrolling(bool) {
     if (this.state.fastScrolling === bool) return
     this.state.fastScrolling = bool
-
-    this.element.setAttribute(
-      'data-fast-scrolling',
-      String(this.state.fastScrolling)
-    )
+    this.element.firstElementChild.style.transition = this.state.fastScrolling
+      ? 'none'
+      : ''
   }
 
   get fastScrolling() {
@@ -38,9 +38,8 @@ class VirtualScroller {
   }
 
   onMouseWheel(e) {
-    console.log(e)
-    e.preventDefault()
-    const x = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return
+    const x = e.deltaY
     this.state.dx += x
     this.x += x
     this.animationFrame && cancelAnimationFrame(this.animationFrame)
@@ -51,9 +50,9 @@ class VirtualScroller {
     this.fastScrolling = Math.abs(this.state.dx) > 85
     this.state.dx = 0
 
-    Array.from(this.element.children).forEach(child => {
-      child.style.transform = `translate3d(${-this.x}px, 0, 0)`
-    })
+    // this.element.scrollLeft = this.x
+    this.element.firstElementChild.style.transform = `translate3d(${-this
+      .x}px, 0, 0)`
 
     this.element.dispatchEvent(
       new CustomEvent('virtualscroll', {
