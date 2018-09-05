@@ -1,5 +1,17 @@
 import clampNumber from './util/clampNumber'
 
+const DOM_DELTA_PIXEL = 0x00
+const DOM_DELTA_LINE = 0x01
+const DOM_DELTA_PAGE = 0x02
+const LINE_DELTA =
+  'getComputedStyle' in window
+    ? parseInt(
+        window.getComputedStyle(document.body).getPropertyValue('font-size')
+      )
+    : 16
+
+const PAGE_DELTA = LINE_DELTA * 20
+
 class VirtualScroller {
   constructor(element) {
     this.element = element
@@ -38,10 +50,11 @@ class VirtualScroller {
   }
 
   onMouseWheel(e) {
-    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return
-    const x = e.deltaY
-    this.state.dx += x
-    this.x += x
+    const { x, y } = this.getDelta(e)
+    const horizontal = Math.abs(x) > Math.abs(y)
+    const dx = horizontal ? x : y
+    this.state.dx += dx
+    this.x += dx
     this.animationFrame && cancelAnimationFrame(this.animationFrame)
     this.animationFrame = requestAnimationFrame(() => this.update())
   }
@@ -64,10 +77,29 @@ class VirtualScroller {
 
   updateScrollMax() {
     this.state.scrollMax =
-      Array.from(this.element.children).reduce(
-        (sum, child) => sum + child.scrollWidth,
-        0
-      ) - window.innerWidth
+      [].slice
+        .call(this.element.children)
+        .reduce((sum, child) => sum + child.scrollWidth, 0) - window.innerWidth
+  }
+
+  getDelta(e) {
+    switch (e.deltaMode) {
+      case DOM_DELTA_PIXEL:
+        return {
+          x: e.deltaX,
+          y: e.deltaY
+        }
+      case DOM_DELTA_LINE:
+        return {
+          x: e.deltaX * LINE_DELTA,
+          y: e.deltaY * LINE_DELTA
+        }
+      case DOM_DELTA_PAGE:
+        return {
+          x: e.deltaX * PAGE_DELTA,
+          y: e.deltaY * PAGE_DELTA
+        }
+    }
   }
 }
 

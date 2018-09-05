@@ -208,16 +208,12 @@ article {
   max-height: 80vh;
   width: auto;
   height: auto;
-  will-change: filter;
-  /* transition: filter 3s cubic-bezier(0, 1, 0, 1); */
+  opacity: 1;
+  transition: opacity 0.35s ease-in-out;
 }
 
 .item img[data-src] {
-  filter: grayscale(1) brightness(1.33) blur(1rem);
-}
-
-main[data-fast-scrolling='true'] .item img {
-  transition: none;
+  opacity: 0;
 }
 
 .item figcaption {
