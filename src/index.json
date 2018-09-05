@@ -83,15 +83,15 @@
       "material": "Acryl en olieverf op doek",
       "size": "0.70 x 1.80 m"
     },
-    { "src": "1/21.jpg", "title": "Stof", "size": "0.55 x 1 m" },
+    { "src": "1/21.jpg", "material": "Stof", "size": "0.55 x 1 m" },
     {
       "src": "1/22.jpg",
-      "title": "Acryl op doek",
+      "material": "Acryl op doek",
       "size": "0.35 x 0.50 m"
     },
     {
       "src": "1/23.jpg",
-      "title": "Acryl op doek",
+      "material": "Acryl op doek",
       "size": "0.50 x 0.50 m"
     },
     {
