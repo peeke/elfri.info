@@ -18,6 +18,7 @@ class VirtualScroller {
     this.state = {
       x: 0,
       dx: 0,
+      touchX: 0,
       fastScrolling: false
     }
 
@@ -25,6 +26,10 @@ class VirtualScroller {
     this.element.addEventListener('wheel', e => this.onMouseWheel(e), {
       passive: true
     })
+    this.element.addEventListener('touchstart', e => this.onTouchStart(e), {
+      passive: true
+    })
+    this.element.addEventListener('touchmove', e => this.onTouchMove(e))
 
     this.updateScrollMax()
   }
@@ -53,6 +58,21 @@ class VirtualScroller {
     const { x, y } = this.getDelta(e)
     const horizontal = Math.abs(x) > Math.abs(y)
     const dx = horizontal ? x : y
+
+    this.state.dx += dx
+    this.x += dx
+    this.animationFrame && cancelAnimationFrame(this.animationFrame)
+    this.animationFrame = requestAnimationFrame(() => this.update())
+  }
+
+  onTouchStart(e) {
+    this.touchX = e.touches[0].pageX
+  }
+
+  onTouchMove(e) {
+    const dx = this.touchX - e.touches[0].pageX
+    this.touchX = e.touches[0].pageX
+
     this.state.dx += dx
     this.x += dx
     this.animationFrame && cancelAnimationFrame(this.animationFrame)

@@ -22,6 +22,8 @@ h2 {
 
 h1 {
   font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -47,10 +49,20 @@ article {
 }
 
 .introduction {
-  margin: 10vh 10vw;
-  width: 32rem;
+  margin: 10vh calc(10vw + 8rem) 10vh 10vw;
+  width: 48rem;
   height: 80vh;
   flex: 0 0 auto;
+}
+
+.introduction-text {
+  column-count: 3;
+  column-gap: 3rem;
+  height: calc(80vh - 120px);
+}
+
+.introduction-text p {
+  margin-top: 0;
 }
 
 .introduction aside {
@@ -73,10 +85,12 @@ article {
 
 .scroll-indicator {
   position: relative;
-  width: 200px;
-  height: 1px;
-  margin: 3rem 0;
+  width: 240px;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  padding-bottom: 0.5rem;
   overflow: hidden;
+  color: #b3b3a8;
 }
 
 .scroll-indicator::before {
@@ -84,9 +98,10 @@ article {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
   bottom: 0;
+  height: 1px;
   background-color: #b3b3a8;
+  opacity: 0;
   animation: scroll-indicator 2s 1s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
 
@@ -140,10 +155,11 @@ article {
 
 .item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   margin: 0;
-  width: 100%;
+  width: auto;
   height: auto;
 }
 
@@ -151,7 +167,6 @@ article {
   position: relative;
   flex: 0 0 auto;
   width: auto;
-  margin-right: calc(280px + 2rem);
   height: 100%;
   max-width: 1200px;
   max-height: 800px;
@@ -205,7 +220,7 @@ article {
   z-index: 2;
   display: block;
   max-width: 80vw;
-  max-height: 80vh;
+  max-height: 70vh;
   width: auto;
   height: auto;
   opacity: 1;
@@ -218,9 +233,6 @@ article {
 
 .item figcaption {
   flex: 0 0 auto;
-  align-self: flex-end;
-  max-width: 280px;
-  margin-left: -280px;
 }
 
 .item-title {
@@ -240,4 +252,45 @@ article {
 .item-size {
   font-weight: 400;
   white-space: nowrap;
+}
+
+@media (min-height: 600px) and (min-width: 800px) {
+  h1 {
+    margin-bottom: 3rem;
+  }
+
+  .introduction {
+    width: 32rem;
+    max-width: 100vw;
+  }
+
+  .introduction-text {
+    column-count: 1;
+    height: auto;
+  }
+
+  .scroll-indicator {
+    margin: 3rem 0;
+  }
+
+  .item {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  .item img {
+    max-height: 80vh;
+  }
+
+  .item figcaption {
+    flex: 0 0 auto;
+    align-self: flex-end;
+    max-width: 280px;
+    margin-left: -280px;
+  }
+
+  .item-image {
+    margin-right: calc(280px + 2rem);
+  }
 }
