@@ -13,6 +13,82 @@
       "size": "0.50 x 0.65 m"
     },
     {
+      "src": "2/2-7.jpg",
+      "title": "Herinneringen",
+      "material": "Stof op oud tafelkleed",
+      "size": "1.00 x 1.10 m"
+    },
+    {
+      "src": "2/2-8.jpg",
+      "title": "Mam",
+      "material": "Stof op doek",
+      "size": "0.65 x 0.65 m"
+    },
+    {
+      "src": "1/19.jpg",
+      "title": "What’s in your mind?",
+      "material": "Acryl op doek",
+      "size": "0.80 x 1.20 m"
+    },
+    {
+      "src": "1/20.jpg",
+      "title": "Rust I",
+      "material": "Acryl en olieverf op doek",
+      "size": "0.70 x 1.80 m"
+    },
+    {
+      "src": "2/2-3.jpg",
+      "title": "Rust II",
+      "material": "Acryl en papier op doek",
+      "size": "0.70 x 0.90 m"
+    },
+    {
+      "src": "2/2-6.jpg",
+      "title": "Rust III",
+      "material": "Acryl op doek",
+      "size": "0.50 x 0.60 m."
+    },
+    { "src": "1/21.jpg", "material": "Stof", "size": "0.55 x 1 m" },
+    {
+      "src": "1/22.jpg",
+      "title": "Vrolijk I",
+      "material": "Acryl op doek",
+      "size": "0.35 x 0.50 m"
+    },
+    {
+      "src": "1/23.jpg",
+      "title": "Vrolijk II",
+      "material": "Acryl op doek",
+      "size": "0.50 x 0.50 m"
+    },
+    {
+      "src": "1/vrolijk-3.jpg",
+      "title": "Vrolijk III"
+    },
+    {
+      "src": "2/2-1.jpg",
+      "material": "Gemengde technieken op stof en doek",
+      "size": "1.00 x 1.20 m"
+    },
+    {
+      "src": "2/2-2.jpg",
+      "title": "Blauw",
+      "material": "Acryl op doek",
+      "size": "0.60 x 0.70 m."
+    },
+    {
+      "src": "2/2-4.jpg",
+      "title": "Mijn roze hart",
+      "material": "Olie op doek",
+      "size": "1.00 x 1.20 m"
+    },
+    {
+      "src": "2/2-5.jpg",
+      "title": "Onderweg",
+      "material": "acryl op doek",
+      "size": "0.90 x 0.90 m."
+    },
+    {
       "src": "1/6.jpg",
       "title": "Transformatie",
       "material": "Gemengde technieken op papier",
@@ -25,17 +101,20 @@
       "size": "0.50 x 0.65 m"
     },
     {
-      "src": "1/8.jpg",
+      "src": "1/9.jpg",
+      "title": "Universum I",
       "material": "Gemengde technieken op papier",
       "size": "0.50 x 0.65 m"
     },
     {
-      "src": "1/9.jpg",
+      "src": "1/8.jpg",
+      "title": "Universum II",
       "material": "Gemengde technieken op papier",
       "size": "0.50 x 0.65 m"
     },
     {
       "src": "1/11.jpg",
+      "title": "Universum III",
       "material": "Gemengde technieken op papier",
       "size": "0.50 x 0.65 m"
     },
@@ -68,81 +147,27 @@
     },
     {
       "src": "1/18.jpg",
+      "title": "Knopen",
       "material": "Acryl op doek",
       "size": "0.50 x 1.00 m"
     },
     {
-      "src": "1/19.jpg",
-      "title": "What’s in your mind?",
+      "src": "0/innerlijk.jpg",
+      "title": "Innerlijk Landschap",
       "material": "Acryl op doek",
-      "size": "0.80 x 1.20 m"
+      "size": "1.00 x 1.50 m."
     },
     {
-      "src": "1/20.jpg",
-      "title": "Rust",
-      "material": "Acryl en olieverf op doek",
-      "size": "0.70 x 1.80 m"
-    },
-    { "src": "1/21.jpg", "material": "Stof", "size": "0.55 x 1 m" },
-    {
-      "src": "1/22.jpg",
+      "src": "0/droom1.jpg",
+      "title": "Droom I",
       "material": "Acryl op doek",
-      "size": "0.35 x 0.50 m"
-    },
-    {
-      "src": "1/23.jpg",
-      "material": "Acryl op doek",
-      "size": "0.50 x 0.50 m"
-    },
-    {
-      "src": "2/2-1.jpg",
-      "material": "Gemengde technieken op stof en doek",
-      "size": "1.00 x 1.20 m"
-    },
-    {
-      "src": "2/2-2.jpg",
-      "title": "Koning Oberon",
-      "material": "Gemengde technieken op papier",
-      "size": "0.70 x 1 m"
-    },
-    {
-      "src": "2/2-3.jpg",
-      "title": "Mam",
-      "material": "Stof op doek",
-      "size": "0.65 x 0.65 m"
-    },
-    {
-      "src": "2/2-4.jpg",
-      "title": "Vroeger",
-      "material": "Stof op oud tafelkleed",
-      "size": "1.00 x 1.10 m"
-    },
-    {
-      "src": "2/2-5.jpg",
-      "material": "Acryl op doek",
-      "size": "0.50 x 0.60 m"
-    },
-    {
-      "src": "2/2-6.jpg",
-      "title": "Onderweg",
-      "material": "acryl op doek",
-      "size": "0.90 x 0.90 m"
-    },
-    {
-      "src": "2/2-7.jpg",
-      "title": "Mijn roze hart",
-      "material": "Olie op doek",
-      "size": "1.00 x 1.20 m"
-    },
-    {
-      "src": "2/2-8.jpg",
-      "material": "Acryl en papier op doek",
-      "size": "0.70 x 0.90 m"
+      "size": "0.40 x 0.70 m."
     },
     {
       "src": "2/2-9.jpg",
-      "material": "Acryl op doek",
-      "size": "0.60 x 0.70 m"
+      "title": "Koning Oberon",
+      "material": "Gemengde technieken op papier",
+      "size": "0.70 x 1 m"
     },
     { "src": "0/manvrouw2.jpg", "title": "Man-vrouw II" },
     { "src": "0/manvrouw1.jpg", "title": "Man-vrouw I" },
@@ -150,12 +175,6 @@
     { "src": "0/brug.jpg", "title": "Brug" },
     { "src": "0/zon.jpg", "title": "Zon" },
     { "src": "0/aarde.jpg", "title": "Aarde" },
-    {
-      "src": "0/innerlijk.jpg",
-      "title": "Innerlijk Landschap",
-      "material": "Acryl op doek",
-      "size": "1.00 x 1.50 m."
-    },
     { "src": "0/emotion8.jpg", "title": "E-motion VIII" },
     { "src": "0/emotion7.jpg", "title": "E-motion VII" },
     { "src": "0/emotion6.jpg", "title": "E-motion VI" },
@@ -188,12 +207,6 @@
     { "src": "0/gebroken.jpg", "title": "Gebroken" },
     { "src": "0/stad.jpg", "title": "Stad" },
     { "src": "0/droom2.jpg", "title": "Droom II" },
-    {
-      "src": "0/droom1.jpg",
-      "title": "Droom I",
-      "material": "Acryl op doek",
-      "size": "0.40 x 0.70 m."
-    },
     { "src": "0/druipsteen.jpg", "title": "Druipsteen" }
   ]
 }
